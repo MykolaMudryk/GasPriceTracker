@@ -13,15 +13,6 @@ qt_add_executable(appGasPriceTracker
     main.cpp
 )
 
-# Додайте ресурсний файл
-qt_add_resources(appGasPriceTracker
-    "qml"
-    PREFIX "/"
-    RESOURCES
-        qml.qrc
-)
-
-# Додайте модулі QML
 qt_add_qml_module(appGasPriceTracker
     URI GasPriceTracker
     VERSION 1.0
@@ -30,6 +21,8 @@ qt_add_qml_module(appGasPriceTracker
     SOURCES
         GasPriceClient.h
         GasPriceClient.cpp
+    RESOURCES
+        qml.qrc
 )
 
 set_target_properties(appGasPriceTracker PROPERTIES
